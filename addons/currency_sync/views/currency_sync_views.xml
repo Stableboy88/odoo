@@ -1,0 +1,38 @@
+<odoo>
+    <record id="view_currency_sync_tree" model="ir.ui.view">
+        <field name="name">currency.sync.tree</field>
+        <field name="model">currency.sync</field>
+        <field name="arch" type="xml">
+            <tree string="Currency Sync">
+                <field name="name"/>
+                <field name="rate"/>
+                <field name="date"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_currency_sync_form" model="ir.ui.view">
+        <field name="name">currency.sync.form</field>
+        <field name="model">currency.sync</field>
+        <field name="arch" type="xml">
+            <form string="Currency Sync">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="rate"/>
+                        <field name="date"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_currency_sync" model="ir.actions.act_window">
+        <field name="name">Currency Sync</field>
+        <field name="res_model">currency.sync</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_currency_sync_root" name="Currency Sync"/>
+    <menuitem id="menu_currency_sync" name="Currency Sync" parent="menu_currency_sync_root" action="action_currency_sync"/>
+</odoo>

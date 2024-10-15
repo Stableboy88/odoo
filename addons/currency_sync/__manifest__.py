@@ -8,7 +8,9 @@
     """,
     'author': 'Stableboy',
     'depends': ['base'],
-    'data': [],
+    'data': [
+        'views/currency_sync_views.xml',
+    ],
     'installable': True,
     'application': True,
 }
